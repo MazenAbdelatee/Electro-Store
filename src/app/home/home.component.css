@@ -1,0 +1,80 @@
+section{
+    background-color: #14261C;
+    position: relative;
+}
+.title{
+    font-size: 7em;
+    font-weight: 500;
+    line-height: 85%;
+    font-family: 'League Gothic';
+    margin-bottom: 0;
+}
+.head{
+    font-family: 'Kaushan Script';
+    color: #06752E;
+    font-size: 3rem;
+}
+.describe{
+    font-size: 1.7em;
+    line-height: 1.2em;
+    font-weight: 300;
+}
+.image{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    margin-left: 2rem;
+    margin-top: 20px;
+}
+.card-image{
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
+    margin-top: 4rem;
+    position: relative;
+}
+.product{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+.image-container{
+    position: relative; 
+}
+.discont {
+    position: absolute; /* Use absolute positioning */
+    top: 80px; /* Adjust this value to set vertical position */
+    left: 10px; /* Adjust this value to set horizontal position */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background color for contrast */
+    padding: 10px; /* Optional: Add some padding */
+    border-radius: 20px; /* Optional: Add rounded corners */
+    z-index: 10; /* Ensure it is above the image */
+}
+.deal{
+    background-image: url(https://websitedemos.net/black-friday-04/wp-content/uploads/sites/1419/2023/11/bg-07.jpg);
+    min-height: 600px;
+    background-size:cover;
+    background-attachment:scroll;
+    background-color: #14261C;
+}
+.deal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4B4F58; /* Semi-transparent overlay for better contrast */
+    opacity: 0.4;
+    z-index: 1; /* Place behind content */
+}
+.deal-content {
+    position: relative; /* Place above the overlay */
+    z-index: 2; /* Ensure content is above the overlay */
+    padding: 20px; /* Add some padding */
+    text-align: center; /* Center text */
+}
+.showbtn{
+    margin-right: 10rem;
+}
