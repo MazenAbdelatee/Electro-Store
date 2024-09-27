@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ButtonsComponent } from './shared/buttons/buttons.component';
 import { ProductsComponent } from './products/products.component';
 
+
 @NgModule({
   declarations: [	
     AppComponent,
