@@ -1,0 +1,21 @@
+#quantity {
+max-width: 150px;
+height: 38px;
+}
+
+#decreaseQuantity, #increaseQuantity {
+width: 38px;
+height: 38px;
+}
+
+.product-actions {
+max-width: 300px;
+}
+
+.size{
+    min-width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+  

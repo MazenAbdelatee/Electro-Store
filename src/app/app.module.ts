@@ -1,3 +1,5 @@
+;
+import { NotFoundComponent } from './not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +10,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ButtonsComponent } from './shared/buttons/buttons.component';
 import { ProductsComponent } from './products/products.component';
+import { PrdetailComponent } from './prdetail/prdetail.component';
+import { CartComponent } from './cart/cart.component';
+
 
 
 @NgModule({
@@ -18,10 +23,14 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     ButtonsComponent,
     ProductsComponent,
+    PrdetailComponent,
+    NotFoundComponent,
+    CartComponent,
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

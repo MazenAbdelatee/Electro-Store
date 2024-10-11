@@ -1,37 +1,48 @@
-<!-- selection form -->
-<div class="p-3 bg-dark">
-    
-<select class="form-select bg-dark text-success" aria-label="Default select example" style="border-radius: 0 !important;border: 1px solid #198754 !important;" >
-    <option selected class="" >All</option>
-    <option [value]="i" *ngFor="let i of categorylist">{{i}}</option>
-</select>
-</div>
-<!-- simple card style -->
-
-<div class="d-flex justify-content-center row">
-    <div class="col-md-12">
-        <ng-container *ngFor="let i of prdata">
-
-            <div class="row p-2 bg-dark border rounded">
-                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" [src]="i.image"></div>
-                <div class="col-md-6 mt-1">
-                    <h5 class="text-light">{{i.title}}</h5>
-                    <div class="d-flex flex-row">
-                        <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>{{i.rating.rate}}</span>
+<div class="container">
+    <!-- selection form -->
+    <div class="my-1">
+        
+    <select class="form-select px-5 my-2  text-success" aria-label="Default select example"(change)="filter($event)" >
+        <option selected class=""> Most Selling</option>
+        <option [value]="i" *ngFor="let i of categorylist">{{i}}</option>
+    </select>
+    </div>
+    <!-- cards -->
+    <div class="d-flex justify-content-center row  mt-4">
+        <div class="col-md-12">
+            <ng-container *ngFor="let i of filteredData">
+                <div class="row p-2">
+                    <div class="col-md-3 mt-1"><img alt="" class="img-fluid img-responsive rounded product-image" [src]="i.image"></div>
+                    <div class="col-md-6 mt-1">
+                        <h5 class="text-light">{{i.title}}</h5>
+                        <div class="d-flex flex-row">
+                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>{{i.rating}}</span>
+                        </div>
+                        <div class="mt-1 mb-1 spec-1">
+                            <span>High performance</span><span class="dot"></span>
+                            <span>Energy efficient</span><span class="dot"></span>
+                            <span>Durable build<br></span>
+                        </div>
+                        <div class="mt-1 mb-1 spec-1">
+                            <span>Latest technology</span><span class="dot"></span>
+                            <span>For professionals</span><span class="dot"></span>
+                            <span>Warranty included<br></span>
+                        </div>
+                        
+                        <p class="text-justify  para mb-0 text-light">{{i.description}}<br><br></p>
                     </div>
-                    <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
-                    <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
-                    <p class="text-justify text-truncate para mb-0 text-light">{{i.description}}<br><br></p>
-                </div>
-                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                    <div class="d-flex flex-row align-items-center">
-                        <h4 class="mr-1 text-light">{{i.price|currency}}</h4><span class="strike-text">$20.99</span>
+                    <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                        <div class="d-flex flex-row align-items-center">
+                            <h4 class="mr-1 text-light">{{i.price*90/100|currency}}</h4><span class="strike-text">{{i.price|currency}}</span>
+                        </div>
+        
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-outline-success btn-lg mt-5" type="button" (click)="getDetail(i)">Details</button></div>
                     </div>
-                    <h6 class="text-success">Free shipping</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-success btn-sm" type="button">Details</button><button class="btn btn-outline-success btn-sm mt-2" type="button">Add to wishlist</button></div>
                 </div>
-            </div>
-        </ng-container>
+            </ng-container>
 
+        </div>
     </div>
 </div>
+
+

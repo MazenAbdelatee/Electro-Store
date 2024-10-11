@@ -1,10 +1,10 @@
 button{
     font-size: 1em;
     background-color: #1BAE70;
-    padding: 5px 25px;
+    /* padding: 5px 25px; */
     color: #fff;
     margin-bottom: 2rem;
-    position: absolute;
+    /* position: absolute; */
     /* bottom: 0; */
     font-size: 2em;
     font-weight: 500;

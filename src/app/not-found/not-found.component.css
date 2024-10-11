@@ -1,0 +1,49 @@
+.not-found-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+text-align: center;
+/* background-color: #f0f0f0;  */
+padding: 20px;
+background-image: url(https://cdnvb4.haiper.ai/jobs/67053148d8c00bad53ccde60/6705317e95903dc16a6db55e/2.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center center;
+}
+
+.not-found-title {
+font-size: 96px;
+font-weight: bold;
+color: #1db36d; 
+margin: 0;
+}
+
+.not-found-message {
+font-size: 24px;
+color: #333; 
+margin-bottom: 20px;
+font-weight: 700;
+}
+
+.not-found-image {
+width: 300px;
+margin: 20px 0;
+}
+
+.back-home-btn {
+background-color: #157347; 
+color: white;
+padding: 10px 20px;
+font-size: 18px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+background-color: #157347; /* darker blue on hover */
+}
+  
